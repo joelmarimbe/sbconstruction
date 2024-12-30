@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SBconstruction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">  <!-- Add this line -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <!-- Add these in the head section -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+
+</head>
+<body>
+    <!-- Update the nav section in all HTML files -->
+<nav class="nav-wrapper">
+    <div class="logo">
+        <img src="assets/logo.png" alt="SBCONSTRUCTION">
+        <h4>SBCONSTRUCTION</h4>
+    </div>
+    
+    <!-- Add hamburger menu button -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Add mobile-nav class to nav-links -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive Construction Solutions for Every Need</p>
+        </div>
+    </section>
+<!-- Add this after the hero section -->
+<canvas id="services-canvas"></canvas>
+    <!-- Main Services Section -->
+    <section class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-building"></i>
+            <h3>Commercial Construction</h3>
+            <p>State-of-the-art office buildings, retail spaces, and industrial facilities built to the highest standards.</p>
+            <ul>
+                <li>Office Buildings</li>
+                <li>Retail Centers</li>
+                <li>Industrial Facilities</li>
+                <li>Warehouses</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Residential Construction</h3>
+            <p>Custom homes and residential developments that combine comfort with modern design.</p>
+            <ul>
+                <li>Custom Homes</li>
+                <li>Apartment Complexes</li>
+                <li>Housing Developments</li>
+                <li>Renovations</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-hard-hat"></i>
+            <h3>Civil Engineering</h3>
+            <p>Infrastructure projects that connect and serve communities across Zimbabwe.</p>
+            <ul>
+                <li>Roads and Bridges</li>
+                <li>Water Systems</li>
+                <li>Drainage Solutions</li>
+                <li>Site Development</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Renovation & Remodeling</h3>
+            <p>Transform existing spaces with our expert renovation and remodeling services.</p>
+            <ul>
+                <li>Interior Renovations</li>
+                <li>Structural Updates</li>
+                <li>Space Optimization</li>
+                <li>Modernization</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Specialized Services -->
+    <section class="specialized-services">
+        <h2>Specialized Services</h2>
+        <div class="specialized-grid">
+            <div class="specialized-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h4>Design & Planning</h4>
+                <p>Comprehensive architectural and engineering design services.</p>
+            </div>
+
+            <div class="specialized-card">
+                <i class="fas fa-solar-panel"></i>
+                <h4>Sustainable Building</h4>
+                <p>Eco-friendly construction methods and materials.</p>
+            </div>
+
+            <div class="specialized-card">
+                <i class="fas fa-clipboard-check"></i>
+                <h4>Project Management</h4>
+                <p>Expert oversight from concept to completion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Contact us today for a free consultation and quote.</p>
+            <div class="cta-buttons">
+                <a href="/contact.html" class="btn primary">Get Quote</a>
+                <a href="tel:+263784429942" class="btn secondary">Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p>Email: sbellarmine75@gmail.com</p>
+                <p>Phone: +263 784 429 942 / +263 718 387 384</p>
+                <p>Address: Stand No 15454, Dzivarasekwa Ext, Harare, Zimbabwe</p>
+            </div>
+        </div>
+    </section>
+    <script src="nav.js"></script>
+    <canvas id="services-canvas"></canvas>
+    <script src="services3d.js"></script>
+</body>
+</html> 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - SBconstruction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <!-- Three.js and additional libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Update the nav section in all HTML files -->
+<nav class="nav-wrapper">
+    <div class="logo">
+        <img src="assets/logo.png" alt="SBCONSTRUCTION">
+        <h4>SBCONSTRUCTION</h4>
+    </div>
+    
+    <!-- Add hamburger menu button -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Add mobile-nav class to nav-links -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- 3D Hero Section -->
+    <section class="hero-3d">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <h1>Our Projects</h1>
+            <p>Explore our portfolio of innovative construction projects</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <canvas id="projects-canvas"></canvas>
+        <div class="projects-container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid">Grid View</button>
+                    <button class="view-btn" data-view="3d">3D View</button>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will be dynamically added here -->
+            </div>
+            <div class="projects-3d" style="display: none;">
+                <canvas id="projects-3d-canvas"></canvas>
+                <!-- 3D project viewer will be initialized here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-3d-viewer">
+                <canvas id="modal-3d-canvas"></canvas>
+            </div>
+            <div class="modal-info">
+                <!-- Project details will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Replace Floor Plan Section with Contact Section -->
+    <section class="contact-cta-section">
+        <div class="contact-container">
+            <h2>Get in Touch With Us</h2>
+            <p class="contact-desc">Ready to start your construction project? We're here to help turn your vision into reality.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>+263 784 429 942</p>
+                    <a href="tel:+263784429942" class="contact-btn">Call Now</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>sbellarmine75@gmail.com</p>
+                    <a href="mailto:sbellarmine75@gmail.com" class="contact-btn">Send Email</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>Stand No 15454, Dzivarasekwa Ext, Harare</p>
+                    <a href="contact.html" class="contact-btn">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Scripts -->
+    <script src="projects3d.js"></script>
+    <script src="projects.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        // View toggle functionality
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.dataset.view;
+                document.querySelector('.projects-grid').style.display = view === 'grid' ? 'grid' : 'none';
+                document.querySelector('.projects-3d').style.display = view === '3d' ? 'block' : 'none';
+                
+                if(view === '3d') {
+                    // Initialize or update 3D view
+                    init3DProjectsView();
+                }
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('projectModal');
+        const closeModal = document.querySelector('.close-modal');
+        
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SBconstruction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <!-- Three.js and additional libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Add canvas for 3D background -->
+    <canvas id="city-canvas"></canvas>
+
+    <!-- Update the nav section in all HTML files -->
+<nav class="nav-wrapper">
+    <div class="logo">
+        <img src="assets/logo.png" alt="SBCONSTRUCTION">
+        <h4>SBCONSTRUCTION</h4>
+    </div>
+    
+    <!-- Add hamburger menu button -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Add mobile-nav class to nav-links -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Building Zimbabwe's Future</h1>
+            <p>Leading the construction industry with innovation and excellence since 2023</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="overview-section">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>SBconstruction is Zimbabwe's premier construction company, delivering excellence in commercial, residential, and industrial projects. Our commitment to quality and innovation has established us as a trusted industry leader.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8+</h3>
+                        <p>Projects Done</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>18+</h3>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <canvas id="timeline-canvas"></canvas>
+        <div class="timeline-container">
+            <h2>Our Journey</h2>
+            <div class="timeline-points">
+                <div class="timeline-point" data-year="2015">
+                    <h3>Foundation</h3>
+                    <p>Established in Harare with a vision to transform construction.</p>
+                </div>
+                <div class="timeline-point" data-year="2017">
+                    <h3>Growth & Recognition</h3>
+                    <p>Completed first major commercial project.</p>
+                </div>
+                <div class="timeline-point" data-year="2019">
+                    <h3>Market Leadership</h3>
+                    <p>Expanded operations across Zimbabwe.</p>
+                </div>
+                <div class="timeline-point" data-year="2023">
+                    <h3>Innovation Hub</h3>
+                    <p>Implementing cutting-edge technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <canvas id="values-canvas"></canvas>
+        <div class="values-container">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>Embracing new technologies and methods</p>
+                </div>
+                <div class="value-card">
+                    <h3>Quality</h3>
+                    <p>Delivering excellence in every project</p>
+                </div>
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>Building trust through honest practices</p>
+                </div>
+                <div class="value-card">
+                    <h3>Sustainability</h3>
+                    <p>Creating eco-friendly solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p>Email: sbellarmine75@gmail.com</p>
+                <p>Phone: +263 784 429 942 / +263 718 387 384</p>
+                <p>Address: Stand No 15454, Dzivarasekwa Ext, Harare, Zimbabwe</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="about3d.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html> 
